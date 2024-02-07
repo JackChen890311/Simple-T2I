@@ -1,4 +1,4 @@
-# SDXL Script
+# Simple SDXL
 
 Simple scripts that runs stable diffusion XL on your device. Including:
  - Stable Diffusion XL (1024 x 1024)
