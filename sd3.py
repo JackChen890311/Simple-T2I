@@ -1,6 +1,6 @@
 import os
 import torch
-from diffusers import DiffusionPipeline
+from diffusers import StableDiffusion3Pipeline
 
 # For downloading models from Hugging Face Hub
 # from huggingface_hub import login
@@ -8,7 +8,7 @@ from diffusers import DiffusionPipeline
 #     token = f.read()
 # login(token = token)
 
-pipe = DiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16)
+pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16)
 pipe.to("cuda")
 
 step = int(input('Stable Diffusion 3 Medium started! Enter "exit" to quit.\nPlease set how many step you want (type 28 for default): '))
@@ -24,4 +24,3 @@ while prompt != "exit":
     print(f'Image saved to output/{prompt}.png')
     print('============================')
     prompt = input('Prompt: ')
-
