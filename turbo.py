@@ -12,10 +12,10 @@ os.makedirs('output', exist_ok=True)
 
 while prompt != "exit":
     image = pipe(prompt=prompt, num_inference_steps=step, guidance_scale=guide).images[0]
-    while os.path.exists(f'output/{prompt}.png'):
+    while os.path.exists(f'output/sdxl_turbo_{prompt}.png'):
         prompt += '_'
-    image.save(f'output/{prompt}.png')
-    print(f'Image saved to output/{prompt}.png')
+    image.save(f'output/sdxl_turbo_{prompt}.png')
+    print(f'Image saved to output/sdxl_turbo_{prompt}.png')
     print('============================')
     prompt = input('Prompt: ')
 

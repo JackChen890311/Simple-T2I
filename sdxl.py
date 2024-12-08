@@ -48,9 +48,9 @@ while prompt != "exit":
     ).images[0]
 
     # Save image
-    while os.path.exists(f'output/{prompt}.png'):
+    while os.path.exists(f'output/sdxl_{prompt}.png'):
         prompt += '_'
-    image.save(f'output/{prompt}.png')
-    print(f'Image saved to output/{prompt}.png')
+    image.save(f'output/sdxl_{prompt}.png')
+    print(f'Image saved to output/sdxl_{prompt}.png')
     print('============================')
     prompt = input('Prompt: ')
